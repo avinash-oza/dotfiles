@@ -14,9 +14,6 @@ autocmd InsertEnter * set background=dark
 set timeoutlen=0
 set ruler
 set t_Co=256
-colorscheme molokai
-set background=dark
-"let g:molokai_original=1
 
 filetype off
 " set the runtime path to include Vundle and initialize
@@ -31,6 +28,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'tpope/vim-fugitive'
+Bundle 'tomasr/molokai'
 "
 " " The following are examples of different formats supported.
 " " Keep Plugin commands between vundle#begin/end.
@@ -52,6 +50,10 @@ Plugin 'tpope/vim-fugitive'
 " " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
+" These lines need to be after installing the theme
+colorscheme molokai
+set background=dark
+"let g:molokai_original=1
 " " To ignore plugin indent changes, instead use:
 " "filetype plugin on
 " "
