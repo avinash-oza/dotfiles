@@ -20,6 +20,7 @@ set background=dark
 
 filetype off
 " set the runtime path to include Vundle and initialize
+" CLONE VUNDLE USING INSTRUCTIONS AT https://github.com/VundleVim/Vundle.vim
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " " alternatively, pass a path where Vundle should install plugins
