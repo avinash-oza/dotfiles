@@ -8,4 +8,4 @@ alias nagios-conf='cd /etc/nagios3/conf.d'
 alias nagios-plugins='cd /usr/lib/nagios/plugins'
 alias telegram-bot='cd /home/pi/git_repos/telegram-bot'
 alias dotfiles='cd /home/pi/dotfiles'
-
+alias rsnapshot-du='sudo rsnapshot du'
