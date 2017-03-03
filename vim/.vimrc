@@ -28,6 +28,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'tpope/vim-fugitive'
+Plugin 'pearofducks/ansible-vim'
 Bundle 'tomasr/molokai'
 "
 " " The following are examples of different formats supported.
