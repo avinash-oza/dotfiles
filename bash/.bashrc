@@ -1,4 +1,8 @@
-TZ='America/New_York'; export TZ
+TZ="America/New_York"
+export TZ
+EDITOR=vim
+export EDITOR
+
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
