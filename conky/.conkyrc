@@ -55,3 +55,7 @@ ${fs_bar /}
 /home $alignc ${fs_used /home} / ${fs_size /home} $alignr ${fs_free_perc /home}%
 ${fs_bar /home}
 
+# Taken from reddit
+BTC ${texeci 300 curl https://api.bitcoinaverage.com/ticker/global/USD/last}
+# taken from https://github.com/matryer/bitbar-plugins/blob/master/Bitcoin/bitfinex.com/bitfinex_btcusd.sh
+ETH ${texeci 300 curl https://api.bitfinex.com/v1/pubticker/ethusd | egrep -o '"last_price":\"[0-9]+(\.)?([0-9]{0,5}\")?' | sed 's/"last_price"://' | sed 's/\"//g' }
