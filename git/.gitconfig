@@ -3,3 +3,7 @@
 	email = avioza@gmail.com
 [core]
 	autocrlf = input
+[color "status"]
+    changed = red bold
+    untracked = red bold
+    added = green bold
