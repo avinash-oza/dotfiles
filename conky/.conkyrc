@@ -56,6 +56,6 @@ ${fs_bar /}
 ${fs_bar /home}
 
 # Taken from reddit
-BTC ${texeci 300 curl https://api.bitfinex.com/v1/pubticker/btcusd | egrep -o '"last_price":\"[0-9]+(\.)?([0-9]{0,5}\")?' | sed 's/"last_price"://' | sed 's/\"//g' }
+BTC ${texeci 300 curl -s https://api.bitfinex.com/v1/pubticker/btcusd | egrep -o '"last_price":\"[0-9]+(\.)?([0-9]{0,5}\")?' | sed 's/"last_price"://' | sed 's/\"//g' }
 # taken from https://github.com/matryer/bitbar-plugins/blob/master/Bitcoin/bitfinex.com/bitfinex_btcusd.sh
-ETH ${texeci 300 curl https://api.bitfinex.com/v1/pubticker/ethusd | egrep -o '"last_price":\"[0-9]+(\.)?([0-9]{0,5}\")?' | sed 's/"last_price"://' | sed 's/\"//g' }
+ETH ${texeci 300 curl -s https://api.bitfinex.com/v1/pubticker/ethusd | egrep -o '"last_price":\"[0-9]+(\.)?([0-9]{0,5}\")?' | sed 's/"last_price"://' | sed 's/\"//g' }

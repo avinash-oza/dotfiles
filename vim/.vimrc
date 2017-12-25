@@ -14,6 +14,7 @@ autocmd InsertEnter * set background=dark
 set timeoutlen=0
 set ruler
 set t_Co=256
+set autochdir
 
 filetype off
 " set the runtime path to include Vundle and initialize
