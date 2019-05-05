@@ -5,8 +5,8 @@ xftalpha 0.5
 update_interval 1.0
 total_run_times 0
 own_window yes
-own_window_type normal
-own_window_transparent yes
+own_window_type desktop
+#own_window_transparent yes
 own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
 double_buffer yes
 minimum_size 200 5
@@ -33,13 +33,13 @@ Uptime $alignr $uptime
 Load $alignr $loadavg
 
 Hostname $alignr $nodename
-wlan0 $alignr ${addr wlan0}
+wlp4s0: $alignr ${addr wlp4s0}
 # ppp0 $alignr ${addr ppp0}
 
-Inbound $alignr ${downspeed wlan0} kb/s
-${downspeedgraph wlan0}
-Outbound $alignr ${upspeed wlan0} kb/s
-${upspeedgraph wlan0}
+Inbound $alignr ${downspeed wlp4s0} kb/s
+${downspeedgraph wlp4s0}
+Outbound $alignr ${upspeed wlp4s0} kb/s
+${upspeedgraph wlp4s0}
 
 $processes processes ($running_processes running)
 
