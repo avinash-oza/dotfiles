@@ -5,7 +5,8 @@ xftalpha 0.5
 update_interval 1.0
 total_run_times 0
 own_window yes
-own_window_type desktop
+own_window_type normal
+own_window_class Conky
 #own_window_transparent yes
 own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
 double_buffer yes
@@ -33,13 +34,13 @@ Uptime $alignr $uptime
 Load $alignr $loadavg
 
 Hostname $alignr $nodename
-wlp4s0: $alignr ${addr wlp4s0}
+enp3s6: $alignr ${addr enp3s6}
 # ppp0 $alignr ${addr ppp0}
 
-Inbound $alignr ${downspeed wlp4s0} kb/s
-${downspeedgraph wlp4s0}
-Outbound $alignr ${upspeed wlp4s0} kb/s
-${upspeedgraph wlp4s0}
+Inbound $alignr ${downspeed enp3s6} kb/s
+${downspeedgraph enp3s6}
+Outbound $alignr ${upspeed enp3s6} kb/s
+${upspeedgraph enp3s6}
 
 $processes processes ($running_processes running)
 
@@ -56,6 +57,10 @@ ${fs_bar /}
 ${fs_bar /home}
 
 # Taken from reddit
-BTC ${texeci 300 curl -s https://api.bitfinex.com/v1/pubticker/btcusd | egrep -o '"last_price":\"[0-9]+(\.)?([0-9]{0,5}\")?' | sed 's/"last_price"://' | sed 's/\"//g' }
+
+CB BTC ${texeci 300 curl -s https://api.coinbase.com/v2/prices/BTC-USD/buy | python -c "import json; import sys; print(json.loads(sys.stdin.read())['data']['amount'])" }
+BFX BTC ${texeci 300 curl -s https://api.bitfinex.com/v1/pubticker/btcusd | egrep -o '"last_price":\"[0-9]+(\.)?([0-9]{0,5}\")?' | sed 's/"last_price"://' | sed 's/\"//g' }
 # taken from https://github.com/matryer/bitbar-plugins/blob/master/Bitcoin/bitfinex.com/bitfinex_btcusd.sh
-ETH ${texeci 300 curl -s https://api.bitfinex.com/v1/pubticker/ethusd | egrep -o '"last_price":\"[0-9]+(\.)?([0-9]{0,5}\")?' | sed 's/"last_price"://' | sed 's/\"//g' }
+
+CB ETH ${texeci 300 curl -s https://api.coinbase.com/v2/prices/ETH-USD/buy | python -c "import json; import sys; print(json.loads(sys.stdin.read())['data']['amount'])" }
+BFX ETH ${texeci 300 curl -s https://api.bitfinex.com/v1/pubticker/ethusd | egrep -o '"last_price":\"[0-9]+(\.)?([0-9]{0,5}\")?' | sed 's/"last_price"://' | sed 's/\"//g' }
