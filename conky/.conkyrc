@@ -58,9 +58,9 @@ ${fs_bar /home}
 
 # Taken from reddit
 
-CB BTC ${texeci 300 curl -s https://api.coinbase.com/v2/prices/BTC-USD/buy | python -c "import json; import sys; print(json.loads(sys.stdin.read())['data']['amount'])" }
+CB BTC ${texeci 300 curl -s https://api.coinbase.com/v2/prices/BTC-USD/buy | python3 -c "import json; import sys; print(json.loads(sys.stdin.read())['data']['amount'])" }
 BFX BTC ${texeci 300 curl -s https://api.bitfinex.com/v1/pubticker/btcusd | egrep -o '"last_price":\"[0-9]+(\.)?([0-9]{0,5}\")?' | sed 's/"last_price"://' | sed 's/\"//g' }
 # taken from https://github.com/matryer/bitbar-plugins/blob/master/Bitcoin/bitfinex.com/bitfinex_btcusd.sh
 
-CB ETH ${texeci 300 curl -s https://api.coinbase.com/v2/prices/ETH-USD/buy | python -c "import json; import sys; print(json.loads(sys.stdin.read())['data']['amount'])" }
+CB ETH ${texeci 300 curl -s https://api.coinbase.com/v2/prices/ETH-USD/buy | python3 -c "import json; import sys; print(json.loads(sys.stdin.read())['data']['amount'])" }
 BFX ETH ${texeci 300 curl -s https://api.bitfinex.com/v1/pubticker/ethusd | egrep -o '"last_price":\"[0-9]+(\.)?([0-9]{0,5}\")?' | sed 's/"last_price"://' | sed 's/\"//g' }
