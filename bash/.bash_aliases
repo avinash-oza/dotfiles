@@ -1,5 +1,6 @@
 # ls
 alias ll='ls -altr'
+alias nettop='sudo tcptrack -i enp4s0'
 
 # git
 alias gs='git status'
