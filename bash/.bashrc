@@ -45,6 +45,7 @@ function start_agent {
 }
 
 # We do not setup the agent automatically as it causes issues for forwarding
+
 #if [ -f "${SSH_ENV}" ]; then
 #    . "${SSH_ENV}" > /dev/null
 #    #ps ${SSH_AGENT_PID} doesn't work under cywgin
