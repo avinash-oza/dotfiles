@@ -32,6 +32,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'pearofducks/ansible-vim'
 Bundle 'tomasr/molokai'
 Plugin 'pangloss/vim-javascript'
+Plugin 'hashivim/vim-terraform'
 "
 " " The following are examples of different formats supported.
 " " Keep Plugin commands between vundle#begin/end.
